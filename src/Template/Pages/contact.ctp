@@ -1,0 +1,44 @@
+<?php
+/**
+ * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
+ * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
+ *
+ * Licensed under The MIT License
+ * For full copyright and license information, please see the LICENSE.txt
+ * Redistributions of files must retain the above copyright notice.
+ *
+ * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * @link          http://cakephp.org CakePHP(tm) Project
+ * @since         0.10.0
+ * @license       http://www.opensource.org/licenses/mit-license.php MIT License
+ */
+use Cake\Cache\Cache;
+use Cake\Core\Configure;
+use Cake\Core\Plugin;
+use Cake\Datasource\ConnectionManager;
+use Cake\Error\Debugger;
+use Cake\Network\Exception\NotFoundException;
+
+$this->layout = "home";
+
+if (!Configure::read('debug')):
+    throw new NotFoundException('Please replace src/Template/Pages/home.ctp with your own version.');
+endif;
+
+$cakeDescription = 'CakePHP: the rapid development PHP framework';
+?>
+	
+	<div id="gtco-contact" data-section="contact" class="gtco-cover gtco-cover-xs" style="background-image:url(images/img_bg_2.jpg);">
+		<div class="overlay"></div>
+		<div class="gtco-container">
+			<div class="row text-center">
+				<div class="display-t">
+					<div class="display-tc">
+						<div class="col-md-12">
+							<h3>If you have inqueries please email us at <a href="#">info@yourdomain.com</a></h3>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
